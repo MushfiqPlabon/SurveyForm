@@ -1,61 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Survey Form</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body class="card">
-    <h1 id="title">Sample Form</h1>
-    <p id="description">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe modi unde
-      quibusdam commodi! Commodi illum eaque ipsam similique ut. Et quaerat
-      accusantium voluptatem praesentium odit nostrum iusto doloribus
-      repudiandae consequuntur.
-    </p>
-    <form id="survey-form" method="get">
-      <label for="name" id="name-label" class="label">Name: </label>
-      <input type="text" name="name" placeholder="Type your name" id="name" />
-      <br />
-      <label for="email" id="email-label" class="label">Email: </label>
-      <input
-        type="email"
-        name="email"
-        placeholder="Type your email"
-        id="email"
-      />
-      <br />
-      <label for="number" id="number-label" class="label">Phone Number: </label>
-      <input
-        type="number"
-        name="number"
-        placeholder="Type your phone number"
-        id="number"
-        minlength="10"
-        maxlength="11"
-      />
-      <br />
-      <label for="dropdown" id="dropdown-label" class="label">Gender:</label>
-      <select id="dropdown" name="gender">
-        <option value="male">Male</option>
-        <option value="female">Female</option>
-        <option value="other">Other</option>
-      </select>
-      <br />
-      <div class="label">What do you prefer?</div>
-      <input type="radio" name="cord" value="catto" id="catto" />
-      <label for="catto">I love cats</label>
-      <input type="radio" name="cord" value="doggo" id="doggo" />
-      <label for="doggo">I like dogs</label>
-      <br />
-      <div class="label">Give us your suggestions:</div>
-      <textarea name="comments" placeholder="Your comments" id="textarea">
+
+<head>
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet" />
+</head>
+
+<body class="card">
+  <h1 id="title">Sample Form</h1>
+  <p id="description">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe modi unde
+    quibusdam commodi! Commodi illum eaque ipsam similique ut. Et quaerat
+    accusantium voluptatem praesentium odit nostrum iusto doloribus
+    repudiandae consequuntur.
+  </p>
+  <form id="survey-form" method="get">
+    <label for="name" id="name-label" class="label">Name: </label>
+    <input type="text" name="name" placeholder="Type your name" id="name" required />
+    <br />
+    <label for="email" id="email-label" class="label">Email: </label>
+    <input type="email" name="email" placeholder="Type your email" id="email" required />
+    <br />
+    <label for="number" id="number-label" class="label">Phone Number: </label>
+    <input type="number" name="number" placeholder="Type your phone number" id="number" min="10" max="100" required />
+    <br />
+    <label for="dropdown" id="dropdown-label" class="label">Gender:</label>
+    <select id="dropdown" name="gender">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+    <br />
+    <div class="label">What do you prefer?</div>
+    <input type="radio" name="cord" value="catto" id="catto" />
+    <label for="catto">I love cats</label>
+    <input type="radio" name="cord" value="doggo" id="doggo" />
+    <label for="doggo">I like dogs</label>
+    <br />
+    <div class="label">Give us your suggestions:</div>
+    <textarea name="comments" placeholder="Your comments" id="textarea">
       </textarea>
-      <br />
-      <input type="submit" value="Submit" id="submit" />
-    </form>
-  </body>
+    <br />
+    <div>
+      <input type="checkbox" id="privacy" value="privacy" name="privacy" />
+      <label for="privacy">I have certainly not read the privacy policy.</label>
+      <input type="checkbox" id="letSteal" value="letSteal" name="letSteal" />
+      <label for="letSteal">You have my consent to steal my data.</label>
+    </div>
+    <br />
+    <input type="submit" value="Submit" id="submit" />
+  </form>
+</body>
+
 </html>
